@@ -6,6 +6,9 @@ import { Divider } from "@mui/material";
 import FlexBetween from "./components/FlexBetween";
 import CustomTypography from "./components/CustomTypography";
 import { Box, Typography, IconButton } from "@mui/material";
+import DashboardIcon from "@mui/icons-material/Dashboard";
+import BugReportIcon from "@mui/icons-material/BugReport";
+import LogoutIcon from "@mui/icons-material/Logout";
 
 export default function NavMenu() {
   return (
@@ -17,39 +20,28 @@ export default function NavMenu() {
         <Box m="1.5rem 2rem 2rem 3rem">
           <FlexBetween>
             <Box display="flex" alignItems="center" gap="0.5rem">
-              <CustomTypography>THE BUG SLAYER</CustomTypography>
+              <CustomTypography>🐞 THE BUG SLAYER</CustomTypography>
             </Box>
           </FlexBetween>
         </Box>
       </Box>
       <FlexBetween gap="0rem">
-        <SideBarIcon icon={<FaFire size="28" />} />
-        <p
-          className="relative flex items-center justify-center 
-    h-12 w-12 mx-auto"
-        >
-          Dashboard
-        </p>
+        <SideBarIcon icon={<DashboardIcon />} />
+        <p className="mx-auto">Dashboard</p>
       </FlexBetween>
       <Divider />
-      <FlexBetween>
-        <SideBarIcon icon={<BsPlus size="32" />} />
-        <p
-          className="relative flex items-center justify-center 
-    h-12 w-12 mt-2 mb-2 mx-auto"
-        >
-          Tickets
-        </p>
+      <FlexBetween gap="0rem">
+        <SideBarIcon icon={<BugReportIcon />} />
+        <p className="mx-auto">Tickets</p>
       </FlexBetween>
       <Divider />
-      <FlexBetween>
+      <FlexBetween gap="0rem">
         <SideBarIcon icon={<BsGearFill size="22" />} />
-        <p
-          className="relative flex items-center justify-center 
-    h-12 w-12 mt-2 mb-2 mx-auto"
-        >
-          Administration
-        </p>
+        <p className="mx-auto">Administration</p>
+      </FlexBetween>
+      <FlexBetween gap="0rem">
+        {/* <SideBarIcon icon={<LogoutIcon />} /> */}
+        <p className="mx-auto mt-10 text-green-500	">Log Out</p>
       </FlexBetween>
     </div>
   );
